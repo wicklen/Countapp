@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    background: url(http://static.pexels.com/wp-content/uploads/2014/07/ice-iceberg-iceland-1797.jpg);
+    background-size: cover;
+}
+
+body {
+    background: #2F3243;
+    background: rgba(47, 50, 67, 0.9);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+header {
+    background: rgba(0, 0, 0, .1);
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+    font-size: 16px;
+}
+
+header a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 49px;
+    padding: 0 20px;
+}
+
+.nav {
+    left: 0px;
+}
+
+.edit {
+    right: 0px;
+}
+
+.players {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.players li {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.players li:first-child {
+    padding-left: 15px;
+}
+
+.players li:last-child {
+    padding-right: 15px;
+}
+
+.player-name {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.player-score {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -3px;
+    line-height: 1.2;
+}
+
+.player-score:disabled {
+    opacity: 1;
+}
+
+.score-buttons {
+    font-size: 50px;
+}
+
+.update {
+    padding: 20px 20px;
+}
+
+.update input[type="submit"] {
+    background: #30B9DE;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    font-family: Lato;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    -webkit-appearance: none;
+    border-radius: 50px;
+}

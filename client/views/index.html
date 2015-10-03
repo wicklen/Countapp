@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="countApp"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        
+        <link rel="stylesheet" type="text/css" href="/js/app.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css">
+    </head>
+    <body ng-controller="countController">
+
+        <header>
+            <a href="#" class="nav">
+                <span class="ion-navicon-round"></span>
+            </a>
+            <h1>{{ game.name }}</h1>
+            <a class="edit" href="#" ng-click="message.opened = !message.opened">
+                <span class="ion-edit"></span>
+            </a>
+        </header>
+
+        <div>
+            <form ng-submit="updateStandings()">
+                <ul class="players">
+                    <li ng-repeat="player in players">                 
+                        
+                        <h2 class="player-name">{{ player.name }}</h2>
+                        
+                        <input type="hidden" ng-model="player.score" />
+
+                        <span class="player-score" ng-model="player.score">{{player.score}}</span>
+                        
+                        <div class="score-buttons">
+                            <a ng-click="player.score = player.score + 1">
+                                <span class="ion-ios-plus-outline"></span>
+                            </a>
+                            <a ng-show="message.opened" ng-click="player.score = player.score - 1">
+                                <span class="ion-ios-minus-outline"></span>
+                            </a>
+                        </div>
+
+                    </li>
+                </ul>
+                <div class="update">
+                    <input type="submit" value="Update score" />
+                    <p style="text-align:center;">{{ response.message }}</p>
+                </div>
+            </form>
+            <!-- <ul>
+                <li ng-repeat="game in games">
+                    {{ game.name }}
+                </li>
+            </ul> -->
+        </div>
+      
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+
+        <script type='application/javascript' src='/js/fastclick.js'></script>
+        <script type="text/javascript" src="/js/app.js"></script>
+        <script type="text/javascript" src="/js/controllers/countController.js"></script>
+
+    </body>
+</html>
